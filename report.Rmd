@@ -1,0 +1,70 @@
+---
+title: "Understanding Trade"
+author:
+- familyname: Jaiswal
+  othernames: Prachi
+  address: Monash University
+  email: "pjai0005@student.monash.edu"
+  correspondingauthor: true
+  qualifications:  Undergraduate
+- familyname: Jiang
+  othernames: Yuwei
+  address: Monash Universtidy
+  email: "yjia0142@student.monash.edu"
+  correspondingauthor: true
+  qualifications: Master
+- familyname: Jawahar
+  othernames: Sithalakshmi 
+  address: Monash University
+  email: "sjaw002@student.monash.edu"
+  correspondingauthor: true
+  qualifications:  Undergraduate  
+department: Monash University \newline Business and Economics
+organization: ETC5513 Assignment4 Team Nemo
+bibliography: references.bib
+biblio-style: authoryear-comp
+linestretch: 1.5
+output:
+  bookdown::pdf_document2:
+    template: monashreport2.tex
+    fig_caption: yes
+    fig_height: 5
+    fig_width: 8
+    includes:
+      in_header: preamble.tex
+    keep_tex: yes
+    number_sections: yes
+    citation_package: biblatex
+    toc: false
+---
+```{r , include=FALSE}
+
+ knitr::opts_chunk$set(fig.pos = "H", out.extra = "",  echo = FALSE, message = FALSE, warning = FALSE)
+
+# Libraries
+library(tidyverse)
+library(readr)
+library(kableExtra)
+library(bookdown)
+library(ggplot2)
+library(ggthemes)
+library(ggpubr)
+library(maps)
+```
+
+
+
+
+
+\section*{Introduction}
+
+\section*{Germany}
+
+\section*{China}
+
+\section*{United States of America}
+
+\section*{Conclusion}
+
+
+
