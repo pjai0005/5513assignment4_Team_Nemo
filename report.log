@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.29)  30 MAY 2021 02:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.29)  30 MAY 2021 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1351,7 +1351,7 @@ df-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<Figures/logo.jpg, id=4, 4015.0pt x 6022.5pt>
+<Figures/logo.jpg, id=20, 4015.0pt x 6022.5pt>
 File: Figures/logo.jpg Graphic file (type jpg)
 <use Figures/logo.jpg>
 Package pdftex.def Info: Figures/logo.jpg  used on input line 296.
@@ -1625,42 +1625,67 @@ Overfull \hbox (56.23262pt too wide) detected at line 296
 
 {c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map} <./Figures/logo.jpg>]
+<report_files/figure-latex/Yuweiplot1-1.pdf, id=29, 578.16pt x 361.35pt>
+File: report_files/figure-latex/Yuweiplot1-1.pdf Graphic file (type pdf)
+<use report_files/figure-latex/Yuweiplot1-1.pdf>
+Package pdftex.def Info: report_files/figure-latex/Yuweiplot1-1.pdf  used on in
+put line 313.
+(pdftex.def)             Requested size: 455.24408pt x 284.52603pt.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 313.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 10.51207pt on input line 313.
+[2 <./report_files/figure-latex/Yuweiplot1-1.pdf>]
+<report_files/figure-latex/Yuweiplot2-1.pdf, id=48, 578.16pt x 361.35pt>
+File: report_files/figure-latex/Yuweiplot2-1.pdf Graphic file (type pdf)
+<use report_files/figure-latex/Yuweiplot2-1.pdf>
+Package pdftex.def Info: report_files/figure-latex/Yuweiplot2-1.pdf  used on in
+put line 322.
+(pdftex.def)             Requested size: 455.24408pt x 284.52603pt.
+<report_files/figure-latex/Yuweiplot3-1.pdf, id=51, 578.16pt x 361.35pt>
+File: report_files/figure-latex/Yuweiplot3-1.pdf Graphic file (type pdf)
+<use report_files/figure-latex/Yuweiplot3-1.pdf>
+Package pdftex.def Info: report_files/figure-latex/Yuweiplot3-1.pdf  used on in
+put line 331.
+(pdftex.def)             Requested size: 455.24408pt x 284.52603pt.
+[3 <./report_files/figure-latex/Yuweiplot2-1.pdf>]
 
-LaTeX Warning: Empty bibliography on input line 308.
-
-
-Package caption Warning: Unused \captionsetup[figure] on input line 60.
-See the caption package documentation for explanation.
+LaTeX Warning: Empty bibliography on input line 343.
 
 
 Package caption Warning: Unused \captionsetup[table] on input line 61.
 See the caption package documentation for explanation.
 
-[2] (./report.aux)
+[4 <./report_files/figure-latex/Yuweiplot3-1.pdf>] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: A7E5984BABFD6DDF0498097820AB5721;924.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25752 strings out of 480714
- 430943 string characters out of 5901854
- 1170978 words of memory out of 5000000
- 42658 multiletter control sequences out of 15000+600000
- 494072 words of font info for 188 fonts, out of 8000000 for 9000
+ 25922 strings out of 480714
+ 434057 string characters out of 5901854
+ 1172431 words of memory out of 5000000
+ 42727 multiletter control sequences out of 15000+600000
+ 504408 words of font info for 246 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,14n,67p,739b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.en
-c}{c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/fontawesom
-e/fontawesometwo.enc}<c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-dist/fonts/t
-ype1/public/fontawesome/FontAwesome.pfb><c:/Users/yuwei/AppData/Roaming/TinyTeX
-/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><c:/Users/yuwei/AppData/Roaming/
-TinyTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb>
-Output written on report.pdf (2 pages, 7462477 bytes).
+ 60i,14n,93p,739b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/ly1/texnan
+si.enc}{c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/
+8r.enc}{c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/fonta
+wesome/fontawesometwo.enc}<c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-dist/fo
+nts/type1/public/fontawesome/FontAwesome.pfb><c:/Users/yuwei/AppData/Roaming/Ti
+nyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/Users/yuwei/AppDat
+a/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb><c:/Users/
+yuwei/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.p
+fb><c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/bera/f
+vsb8a.pfb><c:/Users/yuwei/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public
+/bera/fvsr8a.pfb>
+Output written on report.pdf (4 pages, 7522299 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 61446 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 104 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 77877 words of extra memory for PDF output out of 89155 (max. 10000000)
 
