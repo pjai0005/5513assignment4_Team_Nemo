@@ -83,11 +83,23 @@ assign4 <- write_csv(team_nemo, "data/team_nemo.csv")
 
 
 \section*{Introduction}
+Given the recent Suez Canal fiasco, many countries were facing severe problems in trade markets. Which made us all curious to dive deeper into the subject.
 
-```{r}
+
+For our analysis we are comparing the export and import patterns of these countries over a span of three years to see if they have an import or export deficit, if so, which sector is causing the same. Sectors where they have good in- house production and where they need the materials from other countries.
+
+
+For our analysis we will compare the export and import patterns over a span of 3 years. And according to World Statistical Review 2019, the countries that we have chosen are taken as the top three global trading economies that are China, Germany and the US.
+```{r map, fig.cap = "Top 3 Trading Economies", out.width="100%", fig.show="hold", out.width="100%"}
 final <- read.csv("data/team_nemo.csv")
+library(maptools)
+    data(wrld_simpl)
+    myCountries = wrld_simpl@data$NAME %in% c("China", "Germany", "United States")
+    plot(wrld_simpl, col = c(gray(.8), "red")[myCountries+1])
 ```
+For a better understanding, one should be clear about terms that are used often in the report.
 
+Exports are products that are created and manufactured in one country and marketed to consumers in another country. An import is when goods are purchased in one country that was produced in another. Imports and Exports are the integral elements of International trade. If a country's Value of Imports is higher than the value of Exports, the country shall have a negative balance of trade.
 
 
 \section*{Germany}
