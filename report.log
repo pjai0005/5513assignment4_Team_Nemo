@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.29)  30 MAY 2021 14:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.29)  30 MAY 2021 14:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1610,11 +1610,7 @@ LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 10.51207pt on input line 303.
 
-LaTeX Warning: Empty bibliography on input line 312.
-
-
-Package caption Warning: Unused \captionsetup[table] on input line 61.
-See the caption package documentation for explanation.
+LaTeX Warning: Empty bibliography on input line 329.
 
 [2 <./report_files/figure-latex/gtrade-1.pdf>] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
@@ -1624,11 +1620,11 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25821 strings out of 480714
- 431753 string characters out of 5901940
- 1171032 words of memory out of 5000000
- 42694 multiletter control sequences out of 15000+600000
- 501038 words of font info for 206 fonts, out of 8000000 for 9000
+ 25834 strings out of 480714
+ 431908 string characters out of 5901940
+ 1172106 words of memory out of 5000000
+ 42696 multiletter control sequences out of 15000+600000
+ 501852 words of font info for 212 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,14n,93p,739b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/DELL/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/ly1/texnans
@@ -1637,13 +1633,15 @@ i.enc}{c:/Users/DELL/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r
 ome/fontawesometwo.enc}<c:/Users/DELL/AppData/Roaming/TinyTeX/texmf-dist/fonts/
 type1/public/fontawesome/FontAwesome.pfb><c:/Users/DELL/AppData/Roaming/TinyTeX
 /texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/Users/DELL/AppData/Roam
-ing/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb><c:/Users/DELL/
-AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><c:/Users
-/DELL/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb>
-Output written on report.pdf (2 pages, 7499533 bytes).
+ing/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb><c:/Users/DELL/A
+ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb><c:/
+Users/DELL/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsb8a.pf
+b><c:/Users/DELL/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/bera/fvs
+r8a.pfb>
+Output written on report.pdf (2 pages, 7508787 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 73739 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 53 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 77835 words of extra memory for PDF output out of 89155 (max. 10000000)
 

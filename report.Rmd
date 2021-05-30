@@ -137,6 +137,34 @@ ggarrange(x, y, legend = "top", common.legend = TRUE,
 ```
 
 
+```{r germanytrend}
+
+itrade_val <- germany_import %>% rename("Import_Value"= Trade, 
+                                        "Import"= Flow)
+
+etrade_val <- germany_export %>% rename("Export_Value"= Trade, 
+                                        "Export"= Flow)
+
+trade <- itrade_val %>% 
+  left_join(etrade_val, by=c("Year"="Year", 
+                            "Country"= "Country", 
+                            "Category"= "Category")) 
+
+mean_tarde<- trade %>% 
+  group_by(Year)%>%
+    summarise(Ex_Value= mean(Export_Value),
+              Im_Value=mean(Import_Value)) %>%
+  mutate(Mean_Trade = Ex_Value + Im_Value) %>%
+  select(Year, Mean_Trade)
+
+
+ knitr::kable(mean_tarde, caption = "Trend of Trade in Germany in USD for 3 years") %>%
+    kable_styling (latex_options = c("hover", "hold_position")) 
+
+```
+
+
+
 \section*{China}
 
 \section*{United States of America}
