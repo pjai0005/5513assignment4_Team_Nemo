@@ -193,6 +193,38 @@ annotate_figure(Export,
 ```
 Figure \@ref(fig:Yuweiplot2) shows the important export trades of China from 2016 to 2018. It could be seen that cars, iron_steel, rubber and cotton are the top four categories that China exported from 2016 to 2018. At the same time, wheat, tobacco, sugar and coffee are not that popular among China's export trades. It is interesting to see cars, iron_steel and rubber are also appear in the top four of export trade. And cotton took pharma's place in the export trades. The right part of the Figure \@ref(fig:Yuweiplot2) demonstrates that the total volumes of all the ten categories in 2018 are higher than that of 2016 more or less.
 
+## Balance of trade
+
+```{r include=FALSE}
+import_trades <- China1 %>% mutate(Im_Trade=Trade) %>%
+  select(Category, Year, Im_Trade) 
+export_trades <- China2 %>% mutate(Ex_Trade=Trade) %>%
+  select(Category, Year, Ex_Trade) 
+total <- full_join(import_trades,export_trades ) %>%
+  mutate(n= Ex_Trade-Im_Trade)
+```
+
+```{r Yuweiplot3, fig.cap= "Comparisons of net exports", fig.show="hold", out.width="100%", out.width="100%",echo=FALSE, warning=FALSE, message=FALSE}
+compare <- total %>%
+  ggplot(total , mapping=aes(x=reorder(Category, n),y=n))+
+  geom_bar(stat="identity", position="dodge", aes(fill=Year),width=0.6)+
+  scale_fill_brewer(palette = 'Accent')+
+  xlab("Category") +
+    ylab("Net export") +
+  scale_y_continuous(labels=scales::dollar_format())+
+  ggtitle("Comparisons of net exports")+
+  theme(legend.position="bottom",legend.key.size = unit(0.1, "inches"), axis.text.x = element_text(angle=30,
+                                   hjust=1,
+                                   size=8))
+compare 
+```
+
+
+When we compare the total trades between import and export trades of China, we could draw some conclusions:   
+1.Though the trades of iron_steel win a place in the top4 both in import and export trades of China,the export trades of iron_steel are much larger than that of import trades. Imports are less than half of exports.    
+2. Though the import trades of cars are higher than export trades these years, there is a good upward momentum in the tendency of export trades of cars. It might be predicted that the export trades of cars will be more than import cars trades sooner or later.   
+3. The status of imported pharma trades are higher than that of export trades. And from 2016 to 2018 the amount of imports is getting higher year after year. It might be implied that China  is somewhat dependent on imported medicine or medical instruments.   
+
 \section*{United States of America}
 
 \section*{Conclusion}
