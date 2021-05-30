@@ -52,11 +52,43 @@ library(ggpubr)
 library(maps)
 ```
 
+```{r}
+clean <- function(x, y) {
+  read.csv(x) %>% 
+  select(Country.or.Area: Trade..USD.) %>% 
+  rename( Country = "Country.or.Area", Trade ="Trade..USD." ) %>% 
+  mutate(Category = factor(y)) %>% 
+  select(-Commodity)
+}
 
+
+iron_steel <- clean("data/UNdata_Export_20210520_091706592.csv", "iron_steel")
+fruits_nuts <- clean("data/UNdata_Export_20210520_092512505.csv", "fruits_nuts")
+rubber <- clean("data/UNdata_Export_20210520_092039303.csv", "rubber")
+cars <- clean("data/UNdata_Export_20210519_132226922.csv","cars")
+coffee <- clean("data/UNdata_Export_20210519_133347537.csv","coffee")
+cotton <- clean("data/UNdata_Export_20210519_132629219.csv","cotton")
+pharma <- clean("data/UNdata_Export_20210519_132341600.csv","pharma")
+sugar <- clean("data/UNdata_Export_20210519_132821334.csv","sugar")
+tobacco <- clean("data/UNdata_Export_20210519_131835858.csv","tobacco")
+wheat <- clean("data/UNdata_Export_20210519_132931178.csv","wheat")
+
+```
+
+```{r}
+team_nemo<- rbind(iron_steel, fruits_nuts, rubber, cars, coffee, cotton, pharma, sugar, tobacco, wheat)
+assign4 <- write_csv(team_nemo, "data/team_nemo.csv")
+```
 
 
 
 \section*{Introduction}
+
+```{r}
+final <- read.csv("data/team_nemo.csv")
+```
+
+
 
 \section*{Germany}
 
