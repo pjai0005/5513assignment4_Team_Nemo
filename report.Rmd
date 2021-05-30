@@ -93,6 +93,62 @@ final <- read.csv("data/team_nemo.csv")
 \section*{Germany}
 
 \section*{China}
+# The trades of China
+
+It is reported from Wikipedia(2020) that China has become the world's largest economy by GDP. Due to the rapid growth of China's economy, Chinese trade has expanded at a breakneck pace. This section will concentrate on the analysis of China's performance on world's major varieties of trade.
+
+## Import Trades of China from 2016 to 2018
+
+```{r include=FALSE}
+China_ip <- final %>% filter(Country=="China") %>%
+  filter(Flow=="Import")
+China_ep <- final %>% filter(Country=="China") %>%
+  filter(Flow=="Export")
+```
+
+```{r include=FALSE}
+China1 <- China_ip %>% group_by(Category, Year) %>%
+  summarise(n=sum(Trade)) %>%
+  mutate(Trade=n/1000000000) %>%
+  mutate(Year=as.factor(Year))
+
+China_import1 <- ggplot(China1 ,
+               mapping=aes(x=reorder(Category, Trade),y=Trade))+
+  geom_bar(stat="identity", position="dodge", aes(fill=Year), width = 0.6)+
+  scale_fill_brewer(palette = 'Accent')+
+  scale_y_continuous(labels=scales::dollar_format())+
+  xlab("Category") +
+    ylab("Trade(b)") +
+  theme(legend.position="bottom", legend.key.size = unit(0.1, "inches"), axis.text.x = element_text(angle=30,
+                                   hjust=1,
+                                   size=8))
+China_import1
+```
+
+
+```{r include=FALSE}
+China_import2 <- ggplot(China1, aes(x = Year,
+    y = Trade, 
+    color= Category, group = Category)) +
+    geom_line() +
+  scale_y_continuous(labels=scales::dollar_format())+
+    xlab("Year") +
+    ylab("Trade(b)") +
+  theme(legend.position="bottom", legend.key.size = unit(0.02, "inches"))+
+  geom_point()
+    
+China_import2 
+```
+
+
+```{r Yuweiplot1, fig.cap= "Important Import Trade of China From 2016 to 2018", fig.show="hold", out.width="100%", out.width="100%",echo=FALSE, warning=FALSE, message=FALSE}
+Import <- ggarrange(China_import1, China_import2,  
+           ncol =2)
+annotate_figure(Import,
+                top = text_grob("Important Import Trades of China from 2016 to 2018", face = "bold", size = 12))
+```
+From the Figure \@ref(fig:Yuweiplot1), it could be concluded that cars, pharma,  iron_steel and rubber are the top four categories that China imported from 2016 to 2018. At the same time, coffee, wheat, sugar and tobacco are not so prosperous among China's import trades. It is worth noting that the total volumes of cars' trades in each year are much higher than that of the second place. When look at the right part of the Figure \@ref(fig:Yuweiplot1), the trade tendencies of the most categories are going smoothly or upward, except for rubber.
+
 
 \section*{United States of America}
 
