@@ -92,6 +92,51 @@ final <- read.csv("data/team_nemo.csv")
 
 \section*{Germany}
 
+
+```{r read_germany}
+germany <- final %>% filter(Country == "Germany")
+germany_import <- germany %>% filter(Flow == "Import")
+germany_export <- germany %>% filter(Flow == "Export")
+```
+
+
+```{r plot_germany}
+x<- germany%>% mutate(Trade = Trade/1000000000) %>%
+  filter(Category %in% c("cars", "pharma", "wheat", "tobacco", "sugar"))%>%
+     ggplot(aes(y = reorder(Category, Trade),
+ x = Trade, fill = Flow)) +
+ geom_col(position = "dodge") +
+ facet_grid(~Year)+
+  scale_x_continuous(labels=scales::dollar_format())+
+ scale_fill_brewer(palette = "Dark2") +
+  theme_bw()+
+  ylab("Trade in Billions")+
+  labs(title = "Export Oriented Goods")+
+    theme(axis.title.y=element_blank())
+
+y<- germany %>% mutate(Trade = Trade/1000000000) %>% 
+  filter(Category %in% c("rubber", "iron_steel", "fruits_nuts", "coffee", "cotton"))%>%
+   ggplot(aes(y = reorder(Category, Trade),
+ x = Trade, fill = Flow)) +
+ geom_col(position = "dodge") +
+ facet_grid(~Year)+
+  scale_x_continuous(labels=scales::dollar_format())+
+ scale_fill_brewer(palette = "Dark2")+
+  theme_bw()+
+  ylab("Trade in Billions")+
+  labs(title = "Import Oriented Goods")+
+    theme(axis.title.y=element_blank())
+```
+
+
+```{r gtrade, fig.cap = "Traded Goods in germany", out.width="100%", fig.show="hold", out.width="100%"}
+
+ggarrange(x, y, legend = "top", common.legend = TRUE,
+          ncol =1, nrow = 2)
+
+```
+
+
 \section*{China}
 
 \section*{United States of America}
