@@ -392,6 +392,6 @@ From \@ref(fig:plot2) it has become obvious that USA is a more Import oriented e
 
 
 \section*{Conclusion}
-
-
-
+From the barter system of trading to trading bit coins this field has seen immense growth.  So much so that there is was between China and US, there were tremendous outcries when ships got stuck in the Suez Canal recently. Indicating that this is a sector contributing greatly to the well-being of a countries economy.  
+On the other hand, export is one of the vital factors that increases the foreign exchange reserves held in a nation’s central bank. Traders pay for exports either in their currency or the U.S. The country’s Foreign exchange reserves are directly proportional to the country’s currency rate. Therefore, a country with large reserves can use it to manage its own currency's worth. Hence the country shall have enough foreign currency to flood the market with its currency, consequently lowering the cost of its Import.
+In conclusion, we have observed the top 3 largest trading economies of which two are export economies (Germany and China) and one is an Import economy (USA).  From all three countries the trade of cars and iron and steel are the highest contributors. Even if a country primarily focuses on Import or Export it definitely has a few products that having the opposite direction of flow. Making this a more dynamic and large indicator of the health of the economy of a country.
