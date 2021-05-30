@@ -195,8 +195,201 @@ From the table, cars are exported at the highest rate of 1.89 Billion and cotton
 
 
 \section*{China}
+# The trades of China
+
+It is reported from Wikipedia(2020) that China has become the world's largest economy by GDP. Due to the rapid growth of China's economy, Chinese trade has expanded at a breakneck pace. This section will concentrate on the analysis of China's performance on world's major varieties of trade.
+
+## Import Trades of China from 2016 to 2018
+
+```{r include=FALSE}
+China_ip <- final %>% filter(Country=="China") %>%
+  filter(Flow=="Import")
+China_ep <- final %>% filter(Country=="China") %>%
+  filter(Flow=="Export")
+```
+
+```{r include=FALSE}
+China1 <- China_ip %>% group_by(Category, Year) %>%
+  summarise(n=sum(Trade)) %>%
+  mutate(Trade=n/1000000000) %>%
+  mutate(Year=as.factor(Year))
+
+China_import1 <- ggplot(China1 ,
+               mapping=aes(x=reorder(Category, Trade),y=Trade))+
+  geom_bar(stat="identity", position="dodge", aes(fill=Year), width = 0.6)+
+  scale_fill_brewer(palette = 'Accent')+
+  scale_y_continuous(labels=scales::dollar_format())+
+  xlab("Category") +
+    ylab("Trade(b)") +
+  theme(legend.position="bottom", legend.key.size = unit(0.1, "inches"), axis.text.x = element_text(angle=30,
+                                   hjust=1,
+                                   size=8))
+China_import1
+```
+
+
+```{r include=FALSE}
+China_import2 <- ggplot(China1, aes(x = Year,
+    y = Trade, 
+    color= Category, group = Category)) +
+    geom_line() +
+  scale_y_continuous(labels=scales::dollar_format())+
+    xlab("Year") +
+    ylab("Trade(b)") +
+  theme(legend.position="bottom", legend.key.size = unit(0.02, "inches"))+
+  geom_point()
+    
+China_import2 
+```
+
+
+```{r Yuweiplot1, fig.cap= "Important Import Trade of China From 2016 to 2018", fig.show="hold", out.width="100%", out.width="100%",echo=FALSE, warning=FALSE, message=FALSE}
+Import <- ggarrange(China_import1, China_import2,  
+           ncol =2)
+annotate_figure(Import,
+                top = text_grob("Important Import Trades of China from 2016 to 2018", face = "bold", size = 12))
+```
+From the Figure \@ref(fig:Yuweiplot1), it could be concluded that cars, pharma,  iron_steel and rubber are the top four categories that China imported from 2016 to 2018. At the same time, coffee, wheat, sugar and tobacco are not so prosperous among China's import trades. It is worth noting that the total volumes of cars' trades in each year are much higher than that of the second place. When look at the right part of the Figure \@ref(fig:Yuweiplot1), the trade tendencies of the most categories are going smoothly or upward, except for rubber.
+
+##  Export trades of China from 2016 to 2018
+
+```{r include=FALSE}
+China2 <- China_ep %>% group_by(Category, Year) %>%
+  summarise(n=sum(Trade)) %>%
+  mutate(Trade=n/1000000000) %>%
+  mutate(Year=as.factor(Year))
+```
+
+```{r include=FALSE}
+China_export <- ggplot(China2 ,
+               mapping=aes(x=reorder(Category, Trade),y=Trade))+
+  geom_bar(stat="identity", position="dodge", aes(fill=Year),width=0.6)+
+  scale_y_continuous(labels=scales::dollar_format())+
+  scale_fill_brewer(palette = 'Accent')+
+  xlab("Category") +
+    ylab("Trade(b)") +
+  theme(legend.position="bottom",legend.key.size = unit(0.1, "inches"), axis.text.x = element_text(angle=30,
+                                   hjust=1,
+                                   size=8))
+China_export
+```
+
+```{r include=FALSE}
+China_export1 <- ggplot(China2, aes(x = Year,
+    y = Trade, 
+    color= Category, group = Category)) +
+    geom_line() +
+    xlab("Year") +
+    ylab("Trade(b)") +
+    scale_y_continuous(labels=scales::dollar_format())+
+    theme(legend.position="bottom", legend.key.size = unit(0.02, "inches"))+
+  geom_point()
+China_export1 
+```
+
+```{r Yuweiplot2, fig.cap= " Important Export Trade of China From 2016 to 2018", fig.show="hold", out.width="100%", out.width="100%",echo=FALSE, warning=FALSE, message=FALSE}
+Export <- ggarrange(China_export, China_export1,  
+           ncol =2)
+annotate_figure(Export,
+                top = text_grob("Important Export Trades of China from 2016 to 2018", face = "bold", size = 12))
+```
+Figure \@ref(fig:Yuweiplot2) shows the important export trades of China from 2016 to 2018. It could be seen that cars, iron_steel, rubber and cotton are the top four categories that China exported from 2016 to 2018. At the same time, wheat, tobacco, sugar and coffee are not that popular among China's export trades. It is interesting to see cars, iron_steel and rubber are also appear in the top four of export trade. And cotton took pharma's place in the export trades. The right part of the Figure \@ref(fig:Yuweiplot2) demonstrates that the total volumes of all the ten categories in 2018 are higher than that of 2016 more or less.
+
+## Balance of trade
+
+```{r include=FALSE}
+import_trades <- China1 %>% mutate(Im_Trade=Trade) %>%
+  select(Category, Year, Im_Trade) 
+export_trades <- China2 %>% mutate(Ex_Trade=Trade) %>%
+  select(Category, Year, Ex_Trade) 
+total <- full_join(import_trades,export_trades ) %>%
+  mutate(n= Ex_Trade-Im_Trade)
+```
+
+```{r Yuweiplot3, fig.cap= "Comparisons of net exports", fig.show="hold", out.width="100%", out.width="100%",echo=FALSE, warning=FALSE, message=FALSE}
+compare <- total %>%
+  ggplot(total , mapping=aes(x=reorder(Category, n),y=n))+
+  geom_bar(stat="identity", position="dodge", aes(fill=Year),width=0.6)+
+  scale_fill_brewer(palette = 'Accent')+
+  xlab("Category") +
+    ylab("Net export") +
+  scale_y_continuous(labels=scales::dollar_format())+
+  ggtitle("Comparisons of net exports")+
+  theme(legend.position="bottom",legend.key.size = unit(0.1, "inches"), axis.text.x = element_text(angle=30,
+                                   hjust=1,
+                                   size=8))
+compare 
+```
+
+
+When we compare the total trades between import and export trades of China, we could draw some conclusions:   
+1.Though the trades of iron_steel win a place in the top4 both in import and export trades of China,the export trades of iron_steel are much larger than that of import trades. Imports are less than half of exports.    
+2. Though the import trades of cars are higher than export trades these years, there is a good upward momentum in the tendency of export trades of cars. It might be predicted that the export trades of cars will be more than import cars trades sooner or later.   
+3. The status of imported pharma trades are higher than that of export trades. And from 2016 to 2018 the amount of imports is getting higher year after year. It might be implied that China  is somewhat dependent on imported medicine or medical instruments.   
 
 \section*{United States of America}
+
+## Understanding the trend
+
+```{r plot1, fig.cap= "Flow of goods", out.width="100%", fig.show="hold" }
+usa <- final %>% 
+filter(Country == "USA") %>% 
+  mutate(Trade = Trade/1000000000) %>% 
+    filter(Flow != "Re-Export")
+  
+ggplot(usa, 
+       mapping=aes(x=reorder(Category, Trade),y=Trade)) +
+  aes(fill=Flow)+
+ geom_col(position = "dodge") +
+  facet_grid(~ Year)+
+  scale_y_continuous(labels = scales::dollar) +
+  scale_fill_manual(values=c("#c384e8", "#5fc2ac" ))+ 
+  xlab("Trade Category") + 
+  ggtitle("Comparing Inflow and Outflow through the years")+
+  theme(axis.text.x = element_text(angle=90,
+                                   hjust=1,
+                                   size=8)) 
+  
+```
+
+ From \@ref(fig:plot1) It is obvious that cars are the most traded goods. Even though USA has its own In-house production unit for car brands like Jeep, Ford and Chevrolet it still seems to import a lot of cars at a value of almost 100 billion. Followed by Pharmaceutical products and rubber contributing highly. 
+ 
+Even though USA imports more than it exports, goods like Cotton, fruits and nuts, iron and steel the exports are higher than imports. 
+
+## Net Trade
+
+```{r plot2, fig.cap= "Net trading trend", out.width="100%", fig.show="hold"}
+trade <- final %>% 
+  filter(Country == "USA") %>% 
+  filter(Flow != "Re-Export") %>%  
+  mutate(Trade = Trade/1000000000)
+  
+imports <- trade %>%
+  filter(Flow == "Import") %>% 
+  select(Category, Year, Flow, Trade) %>% 
+  group_by(Category, Year) %>% 
+  summarise(total_im = sum(Trade))
+
+
+exports <- trade %>%
+  filter(Flow == "Export") %>% 
+  select(Category, Year, Flow, Trade) %>% 
+  group_by(Category, Year) %>% 
+  summarise(total_ex = sum(Trade))
+
+
+total <- full_join(imports,exports) %>%
+  mutate(total= total_ex- total_im)
+
+ggplot(total , mapping=aes(x=reorder(Year, total),y= total,  color= Category, group = Category))+
+  geom_line()+ xlab("Year") + ylab("Net Trade") +
+  ggtitle("Net Trading trend in the USA")
+
+
+```
+
+From \@ref(fig:plot2) it has become obvious that USA is a more Import oriented economy than an export oriented one because a majority of the lines lie below 0 indicating that it is import. Even here it can be observed that cotton is exported more than it is imported all with an upward trend. Cars and Iron and steel seem to have a downward trend. The most interesting observation is that wheat is imported exactly as much as it is imported.  While all the other products are seeing an upward trend and almost exported as much as they are imported. 
+
 
 \section*{Conclusion}
 

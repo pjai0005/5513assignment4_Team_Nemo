@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.29)  30 MAY 2021 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.29)  30 MAY 2021 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1325,7 +1325,7 @@ f-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<Figures/logo.jpg, id=4, 4015.0pt x 6022.5pt>
+<Figures/logo.jpg, id=28, 4015.0pt x 6022.5pt>
 File: Figures/logo.jpg Graphic file (type jpg)
 <use Figures/logo.jpg>
 Package pdftex.def Info: Figures/logo.jpg  used on input line 296.
@@ -1599,7 +1599,7 @@ Overfull \hbox (56.23262pt too wide) detected at line 296
 
 {c:/Users/DELL/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex
 .map} <./Figures/logo.jpg>]
-<report_files/figure-latex/gtrade-1.pdf, id=13, 578.16pt x 361.35pt>
+<report_files/figure-latex/gtrade-1.pdf, id=37, 578.16pt x 361.35pt>
 File: report_files/figure-latex/gtrade-1.pdf Graphic file (type pdf)
 <use report_files/figure-latex/gtrade-1.pdf>
 Package pdftex.def Info: report_files/figure-latex/gtrade-1.pdf  used on input 
@@ -1609,23 +1609,57 @@ LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 10.51207pt on input line 305.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 10.51207pt on input line 305.
-[2 <./report_files/figure-latex/gtrade-1.pdf>]
+[2 <./report_files/figure-latex/gtrade-1.pdf>] [3]
+<report_files/figure-latex/Yuweiplot1-1.pdf, id=62, 578.16pt x 361.35pt>
+File: report_files/figure-latex/Yuweiplot1-1.pdf Graphic file (type pdf)
+<use report_files/figure-latex/Yuweiplot1-1.pdf>
+Package pdftex.def Info: report_files/figure-latex/Yuweiplot1-1.pdf  used on in
+put line 376.
+(pdftex.def)             Requested size: 455.24408pt x 284.52603pt.
+<report_files/figure-latex/Yuweiplot2-1.pdf, id=65, 578.16pt x 361.35pt>
+File: report_files/figure-latex/Yuweiplot2-1.pdf Graphic file (type pdf)
+<use report_files/figure-latex/Yuweiplot2-1.pdf>
+Package pdftex.def Info: report_files/figure-latex/Yuweiplot2-1.pdf  used on in
+put line 385.
+(pdftex.def)             Requested size: 455.24408pt x 284.52603pt.
+[4 <./report_files/figure-latex/Yuweiplot1-1.pdf>]
+<report_files/figure-latex/Yuweiplot3-1.pdf, id=81, 578.16pt x 361.35pt>
+File: report_files/figure-latex/Yuweiplot3-1.pdf Graphic file (type pdf)
+<use report_files/figure-latex/Yuweiplot3-1.pdf>
+Package pdftex.def Info: report_files/figure-latex/Yuweiplot3-1.pdf  used on in
+put line 394.
+(pdftex.def)             Requested size: 455.24408pt x 284.52603pt.
+[5 <./report_files/figure-latex/Yuweiplot2-1.pdf>]
+<report_files/figure-latex/plot1-1.pdf, id=94, 578.16pt x 361.35pt>
+File: report_files/figure-latex/plot1-1.pdf Graphic file (type pdf)
+<use report_files/figure-latex/plot1-1.pdf>
+Package pdftex.def Info: report_files/figure-latex/plot1-1.pdf  used on input l
+ine 408.
+(pdftex.def)             Requested size: 455.24408pt x 284.52603pt.
+[6 <./report_files/figure-latex/Yuweiplot3-1.pdf>]
+<report_files/figure-latex/plot2-1.pdf, id=107, 578.16pt x 361.35pt>
+File: report_files/figure-latex/plot2-1.pdf Graphic file (type pdf)
+<use report_files/figure-latex/plot2-1.pdf>
+Package pdftex.def Info: report_files/figure-latex/plot2-1.pdf  used on input l
+ine 419.
+(pdftex.def)             Requested size: 455.24408pt x 284.52603pt.
+[7 <./report_files/figure-latex/plot1-1.pdf>]
 
-LaTeX Warning: Empty bibliography on input line 371.
+LaTeX Warning: Empty bibliography on input line 426.
 
-[3] (./report.aux)
+[8 <./report_files/figure-latex/plot2-1.pdf>] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 3606F905EC26FAA78A6A187A0BE4600F;1251.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25882 strings out of 480714
- 432423 string characters out of 5901940
- 1179167 words of memory out of 5000000
- 42698 multiletter control sequences out of 15000+600000
- 504408 words of font info for 246 fonts, out of 8000000 for 9000
+ 26001 strings out of 480714
+ 435435 string characters out of 5901940
+ 1179805 words of memory out of 5000000
+ 42762 multiletter control sequences out of 15000+600000
+ 506053 words of font info for 267 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,14n,93p,739b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/DELL/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/ly1/texnans
@@ -1639,10 +1673,10 @@ ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb><c:/
 Users/DELL/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsb8a.pf
 b><c:/Users/DELL/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/bera/fvs
 r8a.pfb>
-Output written on report.pdf (3 pages, 7522009 bytes).
+Output written on report.pdf (8 pages, 7572187 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 77835 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 164 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 77908 words of extra memory for PDF output out of 89155 (max. 10000000)
 
