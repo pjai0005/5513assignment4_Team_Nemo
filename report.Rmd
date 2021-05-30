@@ -149,6 +149,49 @@ annotate_figure(Import,
 ```
 From the Figure \@ref(fig:Yuweiplot1), it could be concluded that cars, pharma,  iron_steel and rubber are the top four categories that China imported from 2016 to 2018. At the same time, coffee, wheat, sugar and tobacco are not so prosperous among China's import trades. It is worth noting that the total volumes of cars' trades in each year are much higher than that of the second place. When look at the right part of the Figure \@ref(fig:Yuweiplot1), the trade tendencies of the most categories are going smoothly or upward, except for rubber.
 
+##  Export trades of China from 2016 to 2018
+
+```{r include=FALSE}
+China2 <- China_ep %>% group_by(Category, Year) %>%
+  summarise(n=sum(Trade)) %>%
+  mutate(Trade=n/1000000000) %>%
+  mutate(Year=as.factor(Year))
+```
+
+```{r include=FALSE}
+China_export <- ggplot(China2 ,
+               mapping=aes(x=reorder(Category, Trade),y=Trade))+
+  geom_bar(stat="identity", position="dodge", aes(fill=Year),width=0.6)+
+  scale_y_continuous(labels=scales::dollar_format())+
+  scale_fill_brewer(palette = 'Accent')+
+  xlab("Category") +
+    ylab("Trade(b)") +
+  theme(legend.position="bottom",legend.key.size = unit(0.1, "inches"), axis.text.x = element_text(angle=30,
+                                   hjust=1,
+                                   size=8))
+China_export
+```
+
+```{r include=FALSE}
+China_export1 <- ggplot(China2, aes(x = Year,
+    y = Trade, 
+    color= Category, group = Category)) +
+    geom_line() +
+    xlab("Year") +
+    ylab("Trade(b)") +
+    scale_y_continuous(labels=scales::dollar_format())+
+    theme(legend.position="bottom", legend.key.size = unit(0.02, "inches"))+
+  geom_point()
+China_export1 
+```
+
+```{r Yuweiplot2, fig.cap= " Important Export Trade of China From 2016 to 2018", fig.show="hold", out.width="100%", out.width="100%",echo=FALSE, warning=FALSE, message=FALSE}
+Export <- ggarrange(China_export, China_export1,  
+           ncol =2)
+annotate_figure(Export,
+                top = text_grob("Important Export Trades of China from 2016 to 2018", face = "bold", size = 12))
+```
+Figure \@ref(fig:Yuweiplot2) shows the important export trades of China from 2016 to 2018. It could be seen that cars, iron_steel, rubber and cotton are the top four categories that China exported from 2016 to 2018. At the same time, wheat, tobacco, sugar and coffee are not that popular among China's export trades. It is interesting to see cars, iron_steel and rubber are also appear in the top four of export trade. And cotton took pharma's place in the export trades. The right part of the Figure \@ref(fig:Yuweiplot2) demonstrates that the total volumes of all the ten categories in 2018 are higher than that of 2016 more or less.
 
 \section*{United States of America}
 
