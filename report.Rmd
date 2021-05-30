@@ -96,6 +96,36 @@ final <- read.csv("data/team_nemo.csv")
 
 \section*{United States of America}
 
+## Understanding the trend
+
+```{r plot1, fig.cap= "Flow of goods", out.width="100%", fig.show="hold" }
+usa <- final %>% 
+filter(Country == "USA") %>% 
+  mutate(Trade = Trade/1000000000) %>% 
+    filter(Flow != "Re-Export")
+  
+ggplot(usa, 
+       mapping=aes(x=reorder(Category, Trade),y=Trade)) +
+  aes(fill=Flow)+
+ geom_col(position = "dodge") +
+  facet_grid(~ Year)+
+  scale_y_continuous(labels = scales::dollar) +
+  scale_fill_manual(values=c("#c384e8", "#5fc2ac" ))+ 
+  xlab("Trade Category") + 
+  ggtitle("Comparing Inflow and Outflow through the years")+
+  theme(axis.text.x = element_text(angle=90,
+                                   hjust=1,
+                                   size=8)) 
+  
+```
+
+ From \@ref(fig:plot1) It is obvious that cars are the most traded goods. Even though USA has its own In-house production unit for car brands like Jeep, Ford and Chevrolet it still seems to import a lot of cars at a value of almost 100 billion. Followed by Pharmaceutical products and rubber contributing highly. 
+ 
+Even though USA imports more than it exports, goods like Cotton, fruits and nuts, iron and steel the exports are higher than imports. 
+
+
+
+
 \section*{Conclusion}
 
 
