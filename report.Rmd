@@ -123,7 +123,39 @@ ggplot(usa,
  
 Even though USA imports more than it exports, goods like Cotton, fruits and nuts, iron and steel the exports are higher than imports. 
 
+## Net Trade
 
+```{r plot2, fig.cap= "Net trading trend", out.width="100%", fig.show="hold"}
+trade <- final %>% 
+  filter(Country == "USA") %>% 
+  filter(Flow != "Re-Export") %>%  
+  mutate(Trade = Trade/1000000000)
+  
+imports <- trade %>%
+  filter(Flow == "Import") %>% 
+  select(Category, Year, Flow, Trade) %>% 
+  group_by(Category, Year) %>% 
+  summarise(total_im = sum(Trade))
+
+
+exports <- trade %>%
+  filter(Flow == "Export") %>% 
+  select(Category, Year, Flow, Trade) %>% 
+  group_by(Category, Year) %>% 
+  summarise(total_ex = sum(Trade))
+
+
+total <- full_join(imports,exports) %>%
+  mutate(total= total_ex- total_im)
+
+ggplot(total , mapping=aes(x=reorder(Year, total),y= total,  color= Category, group = Category))+
+  geom_line()+ xlab("Year") + ylab("Net Trade") +
+  ggtitle("Net Trading trend in the USA")
+
+
+```
+
+From \@ref(fig:plot2) it has become obvious that USA is a more Import oriented economy than an export oriented one because a majority of the lines lie below 0 indicating that it is import. Even here it can be observed that cotton is exported more than it is imported all with an upward trend. Cars and Iron and steel seem to have a downward trend. The most interesting observation is that wheat is imported exactly as much as it is imported.  While all the other products are seeing an upward trend and almost exported as much as they are imported. 
 
 
 \section*{Conclusion}

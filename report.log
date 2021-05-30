@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.30)  30 MAY 2021 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.30)  30 MAY 2021 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1351,7 +1351,7 @@ df-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<Figures/logo.jpg, id=8, 4015.0pt x 6022.5pt>
+<Figures/logo.jpg, id=12, 4015.0pt x 6022.5pt>
 File: Figures/logo.jpg Graphic file (type jpg)
 <use Figures/logo.jpg>
 Package pdftex.def Info: Figures/logo.jpg  used on input line 296.
@@ -1625,7 +1625,7 @@ Overfull \hbox (56.23262pt too wide) detected at line 296
 
 {c:/Users/Sitha/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map} <./Figures/logo.jpg>]
-<report_files/figure-latex/plot1-1.pdf, id=17, 578.16pt x 361.35pt>
+<report_files/figure-latex/plot1-1.pdf, id=21, 578.16pt x 361.35pt>
 File: report_files/figure-latex/plot1-1.pdf Graphic file (type pdf)
 <use report_files/figure-latex/plot1-1.pdf>
 Package pdftex.def Info: report_files/figure-latex/plot1-1.pdf  used on input l
@@ -1635,26 +1635,33 @@ LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 10.51207pt on input line 310.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 10.51207pt on input line 310.
+<report_files/figure-latex/plot2-1.pdf, id=23, 578.16pt x 361.35pt>
+File: report_files/figure-latex/plot2-1.pdf Graphic file (type pdf)
+<use report_files/figure-latex/plot2-1.pdf>
+Package pdftex.def Info: report_files/figure-latex/plot2-1.pdf  used on input l
+ine 321.
+(pdftex.def)             Requested size: 455.24408pt x 284.52603pt.
+[2 <./report_files/figure-latex/plot1-1.pdf>]
 
-LaTeX Warning: Empty bibliography on input line 319.
+LaTeX Warning: Empty bibliography on input line 328.
 
 
 Package caption Warning: Unused \captionsetup[table] on input line 61.
 See the caption package documentation for explanation.
 
-[2 <./report_files/figure-latex/plot1-1.pdf>] (./report.aux)
+[3 <./report_files/figure-latex/plot2-1.pdf>] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 89B5A06C287870801D910A929901D1A9;191.
+(rerunfilecheck)             Checksum: 3AC5201D8D9459E5B4E13457757115A3;309.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25681 strings out of 480954
- 428321 string characters out of 5905840
- 1166011 words of memory out of 5000000
- 42292 multiletter control sequences out of 15000+600000
- 502425 words of font info for 220 fonts, out of 8000000 for 9000
+ 25701 strings out of 480954
+ 428742 string characters out of 5905840
+ 1167098 words of memory out of 5000000
+ 42301 multiletter control sequences out of 15000+600000
+ 502763 words of font info for 225 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,14n,93p,739b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/Sitha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/ly1/texnan
@@ -1668,10 +1675,10 @@ Sitha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.p
 fb><c:/Users/Sitha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/bera/f
 vsb8a.pfb><c:/Users/Sitha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public
 /bera/fvsr8a.pfb>
-Output written on report.pdf (2 pages, 7507040 bytes).
+Output written on report.pdf (3 pages, 7516843 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 77843 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 78 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 77856 words of extra memory for PDF output out of 89155 (max. 10000000)
 
